@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/frac.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body onload="bmi()">
+  <div class="container">
+              <h4>Infusion Calculator</h4>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#extra" role="tab" aria-controls="extra" aria-selected="false"></a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+        <form>
+          <div class="form-group">
+            <label for="weightBHO">BHO Weight</label>
+            <div class="input-group">
+              <input class="form-control" id="weightBHO" type="text" value="1" oninput="bmi()" onchange="bmi()" />
+              <div class="input-group-append">
+                <span class="input-group-text">g</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="weightBHO">Nug Weight</label>
+            <div class="input-group">
+              <input class="form-control" id="weightNUG" type="text" value="0" oninput="bmi()" onchange="bmi()" />
+              <div class="input-group-append">
+                <span class="input-group-text">g</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="weightBHO">Coconut oil</label>
+            <div class="input-group">
+              <input class="form-control" id="volumeOIL" type="text" value="1" oninput="bmi()" onchange="bmi()" />
+              <div class="input-group-append">
+                <span class="input-group-text">oz</span>
+              </div>
+            </div>
+          </div>
+
+          <input class="btn btn-primary btn-lg btn-block" type="button" value="Submit" onclick="bmi()" />
+
+      </div>
+      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab">
+
+        <h4>Parameters</h4>
+        <div class="form-group">
+          <label for="bhopercent">BHO %</label>
+          <div class="input-group">
+            <input class="form-control" id="bhopercent" type="text" value="70" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nugpercent">NUG %</label>
+          <div class="input-group">
+            <input class="form-control" id="nugpercent" type="text" value="15" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="capsize">CAP SIZE</label>
+          <div class="input-group">
+            <input class="form-control" id="capsize" type="text" value="0.95" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">mL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-pane fade" id="extra" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+
+
+      </div>
+      <div class="col-sm-6">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <br><br>
+
+        <div class="alert alert-primary" role="alert">
+          <p id="soylecithin">Soy Lecithin optional</p>
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">Results</li>
+          <li class="list-group-item list-group-item-primary">
+            <p id="MGs_total">Here will be your result</p>
+          </li>
+          <li class="list-group-item list-group-item-secondary">
+            <p id="caps_total">Here will be your result</p>
+          </li>
+          <li class="list-group-item list-group-item-success">
+            <p id="mgpercap">Here will be your result</p>
+          </li>
+          <li class="list-group-item list-group-item-info">
+            <p id="mltotal">Here will be your result</p>
+          </li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">stuff here</div>
+      <div class="col-sm-6">and here</div>
+    </div>
+
+  </div>
+</body>
+
+</html>
