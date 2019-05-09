@@ -13,7 +13,7 @@ function bmi () {
     var soyfrac = new Fraction(soylecithin);
     document.getElementById("soylecithin").innerHTML = "Optional addition of " +  soyfrac.toString() + " tsp. of lecithin (soy/sunflower)";
     document.getElementById("MGs_total").innerHTML = "total MGs : " + MGs_total;
-    document.getElementById("caps_total").innerHTML = "total caps : " + caps_total;
+    document.getElementById("caps_total").innerHTML = "total caps : " + Math.floor(caps_total);
     document.getElementById("mgpercap").innerHTML = "mgs per cap : " +  mgpercap;
     document.getElementById("mltotal").innerHTML = "total mL : " +  mltotal;
     }
