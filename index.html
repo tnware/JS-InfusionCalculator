@@ -98,14 +98,22 @@
         </div>
 
         <div class="form-group">
-          <label for="capsize">CAP SIZE</label>
+          <label for="capsize">Capsule Size</label>
           <div class="input-group">
-            <input class="form-control" id="capsize" type="text" value="0.95" oninput="bmi()" onchange="bmi()" />
-            <div class="input-group-append">
-              <span class="input-group-text">mL</span>
-            </div>
+
+            <select id="capsize" class ="form-control" oninput="bmi()" onchange="bmi()">
+              <option value=".90">Size 00</option>
+              <option value=".68">Size 0</option>
+              <option value=".78">Size 0E</option>
+              <option value="1.0">Size 00E</option>
+              <option value=".48">Size 1</option>
+              <option value=".36">Size 2</option>
+              <option value=".27">Size 3</option>
+              <option value=".20">Size 4</option>
+              <option value=".13">Size 5</option>
+            </select>
           </div>
-          <small id="capsizehelp" class="form-text text-muted">How many mL do your caps hold?</small>
+          <small id="capsizehelp" class="form-text text-muted">How many mL do your caps hold? Capsule sizes are based on <a href="https://capsuline.com/pages/empty-capsule-size-chart">this data</a>.</small>
         </div>
 
       </div>
