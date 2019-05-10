@@ -9,11 +9,23 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/frac.js"></script>
   <script src="app.js"></script>
+
+
+<style>
+a, a:visited  {
+    color: #28a745;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover, a:active {
+    color: #155724;
+}
+</style>
 </head>
 
 <body onload="bmi()">
 
-  <nav class="navbar navbar-dark bg-primary">
+  <nav class="navbar navbar-dark bg-success">
     <span class="navbar-brand mb-0 h1">Infusion Calculator</span>
   </nav>
 
@@ -78,7 +90,7 @@
             <p id="soylecithin">Soy Lecithin optional</p>
           </div>
 
-          <input class="btn btn-primary btn-lg btn-block" type="button" value="Submit" onclick="bmi()" />
+          <input class="btn btn-success btn-lg btn-block" type="button" value="Submit" onclick="bmi()" />
 
       </div>
       <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
@@ -250,7 +262,7 @@
     </div>
 
   </div>
-  <nav class="navbar navbar-dark bg-primary">
+  <nav class="navbar navbar-dark bg-success">
     <a class="navbar-brand" href="#"></a>
   </nav>
 </body>
