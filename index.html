@@ -122,21 +122,34 @@
           <p id="soylecithin">Soy Lecithin optional</p>
         </div>
 
-        <ul class="list-group">
-          <li class="list-group-item">Results</li>
-          <li class="list-group-item list-group-item-primary">
-            <p id="MGs_total">Here will be your result</p>
-          </li>
-          <li class="list-group-item list-group-item-secondary">
-            <p id="caps_total">Here will be your result</p>
-          </li>
-          <li class="list-group-item list-group-item-success">
-            <p id="mgpercap">Here will be your result</p>
-          </li>
-          <li class="list-group-item list-group-item-info">
-            <p id="mltotal">Here will be your result</p>
-          </li>
-        </ul>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Measurement</th>
+              <th scope="col">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Total Potency:</th>
+              <td><p id="MGs_total">Here will be your result</p> </td>
+            </tr>
+            <tr>
+              <th scope="row">Total Capsules:</th>
+              <td><p id="caps_total">Here will be your result</p></td>
+            </tr>
+            <tr>
+              <th scope="row">Capsule potency:</th>
+              <td><p id="mgpercap">Here will be your result</p></td>
+            </tr>
+            <tr>
+              <th scope="row">Total mL infused:</th>
+              <td><p id="mltotal">Here will be your result</p></td>
+            </tr>
+
+          </tbody>
+        </table>
+
 
         </form>
       </div>
