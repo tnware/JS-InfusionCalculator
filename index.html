@@ -14,21 +14,23 @@
 <body onload="bmi()">
   <div class="container">
     <br>
-              <h4>Infusion Calculator</h4>
+    <h4>Infusion Calculator</h4><br>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#extra" role="tab" aria-controls="extra" aria-selected="false"></a>
+        <a class="nav-link" id="cost-tab" data-toggle="tab" href="#cost" role="tab" aria-controls="cost" aria-selected="false">Cost</a>
       </li>
     </ul>
+    <br>
+    
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+        <h4>Starting material</h4>
         <form>
           <div class="form-group">
             <label for="weightBHO">Concentrate Weight</label>
@@ -66,7 +68,7 @@
           <input class="btn btn-primary btn-lg btn-block" type="button" value="Submit" onclick="bmi()" />
 
       </div>
-      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
 
         <h4>Parameters</h4>
         <div class="form-group">
@@ -99,11 +101,47 @@
               <span class="input-group-text">mL</span>
             </div>
           </div>
-          <small id="emailHelp" class="form-text text-muted">How many mL do your caps hold?</small>
+          <small id="capsizehelp" class="form-text text-muted">How many mL do your caps hold?</small>
         </div>
 
       </div>
-      <div class="tab-pane fade" id="extra" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      <div class="tab-pane fade" id="cost" role="tabpanel" aria-labelledby="cost-tab">
+
+        <h4>Costs of product</h4>
+        <div class="form-group">
+          <label for="bhocost">Concentrate cost</label>
+          <div class="input-group">
+            <input class="form-control" id="bhocost" type="text" value="0" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
+          <small id="bhocosthelp" class="form-text text-muted">How much did all the concentrate in this batch cost?</small>
+        </div>
+
+        <div class="form-group">
+          <label for="nugcost">Flower cost</label>
+          <div class="input-group">
+            <input class="form-control" id="nugcost" type="text" value="0" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
+          <small id="nugcosthelp" class="form-text text-muted">How much did all the flower in this batch cost?</small>
+        </div>
+
+        <div class="form-group">
+          <label for="oilcost">Oil Cost</label>
+          <div class="input-group">
+            <input class="form-control" id="oilcost" type="text" value="0" oninput="bmi()" onchange="bmi()" />
+            <div class="input-group-append">
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
+          <small id="oilcosthelp" class="form-text text-muted">How much did the oil to infuse this batch cost?</small>
+        </div>
+
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
@@ -121,7 +159,6 @@
         <div class="alert alert-warning" role="alert">
           <p id="soylecithin">Soy Lecithin optional</p>
         </div>
-
         <table class="table table-sm">
           <thead>
             <tr>
@@ -132,24 +169,45 @@
           <tbody>
             <tr>
               <th scope="row">Total Potency:</th>
-              <td><p id="MGs_total">Here will be your result</p> </td>
+              <td>
+                <p id="MGs_total">Here will be your result</p>
+              </td>
             </tr>
             <tr>
               <th scope="row">Total Capsules:</th>
-              <td><p id="caps_total">Here will be your result</p></td>
+              <td>
+                <p id="caps_total">Here will be your result</p>
+              </td>
             </tr>
             <tr>
               <th scope="row">Capsule potency:</th>
-              <td><p id="mgpercap">Here will be your result</p></td>
+              <td>
+                <p id="mgpercap">Here will be your result</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Cost per capsule:</th>
+              <td>
+                <p id="costpercap">Here will be your result</p>
+              </td>
             </tr>
             <tr>
               <th scope="row">Total mL infused:</th>
-              <td><p id="mltotal">Here will be your result</p></td>
+              <td>
+                <p id="mltotal">Here will be your result</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Cost per mL:</th>
+              <td>
+                <p id="costperml">Here will be your result</p>
+              </td>
             </tr>
 
           </tbody>
         </table>
-
+        <small id="potencyhelp" class="form-text text-muted">To adjust potency, change the parameters on the settings section.</small>
+          <small id="costhelp" class="form-text text-muted">To calculate cost, fill in details in the cost section.</small>
 
         </form>
       </div>
