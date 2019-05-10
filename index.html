@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Page Title</title>
+  <title>Infusion Calculator</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -13,6 +13,7 @@
 
 <body onload="bmi()">
   <div class="container">
+    <br>
               <h4>Infusion Calculator</h4>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
@@ -30,33 +31,36 @@
 
         <form>
           <div class="form-group">
-            <label for="weightBHO">BHO Weight</label>
+            <label for="weightBHO">Concentrate Weight</label>
             <div class="input-group">
               <input class="form-control" id="weightBHO" type="text" value="1" oninput="bmi()" onchange="bmi()" />
               <div class="input-group-append">
                 <span class="input-group-text">g</span>
               </div>
             </div>
+            <small id="bhoHelp" class="form-text text-muted">How much concentrate are you infusing into this batch?</small>
           </div>
 
           <div class="form-group">
-            <label for="weightBHO">Nug Weight</label>
+            <label for="weightBHO">Flower Weight</label>
             <div class="input-group">
               <input class="form-control" id="weightNUG" type="text" value="0" oninput="bmi()" onchange="bmi()" />
               <div class="input-group-append">
                 <span class="input-group-text">g</span>
               </div>
             </div>
+            <small id="nugHelp" class="form-text text-muted">How much flower are you infusing into this batch?</small>
           </div>
 
           <div class="form-group">
-            <label for="weightBHO">Coconut oil</label>
+            <label for="weightBHO">Oil Volume</label>
             <div class="input-group">
               <input class="form-control" id="volumeOIL" type="text" value="1" oninput="bmi()" onchange="bmi()" />
               <div class="input-group-append">
                 <span class="input-group-text">oz</span>
               </div>
             </div>
+            <small id="oilvolumehelp" class="form-text text-muted">How much oil are you going to infuse?</small>
           </div>
 
           <input class="btn btn-primary btn-lg btn-block" type="button" value="Submit" onclick="bmi()" />
@@ -66,23 +70,25 @@
 
         <h4>Parameters</h4>
         <div class="form-group">
-          <label for="bhopercent">BHO %</label>
+          <label for="bhopercent">Concentrate Potency</label>
           <div class="input-group">
             <input class="form-control" id="bhopercent" type="text" value="70" oninput="bmi()" onchange="bmi()" />
             <div class="input-group-append">
               <span class="input-group-text">%</span>
             </div>
           </div>
+          <small id="bhopotencyhelp" class="form-text text-muted">How potent is your concentrate?</small>
         </div>
 
         <div class="form-group">
-          <label for="nugpercent">NUG %</label>
+          <label for="nugpercent">Flower Potency</label>
           <div class="input-group">
             <input class="form-control" id="nugpercent" type="text" value="15" oninput="bmi()" onchange="bmi()" />
             <div class="input-group-append">
               <span class="input-group-text">%</span>
             </div>
           </div>
+          <small id="nugpotencyhelp" class="form-text text-muted">How potent are your flowers?</small>
         </div>
 
         <div class="form-group">
@@ -93,6 +99,7 @@
               <span class="input-group-text">mL</span>
             </div>
           </div>
+          <small id="emailHelp" class="form-text text-muted">How many mL do your caps hold?</small>
         </div>
 
       </div>
@@ -111,7 +118,7 @@
       <div class="col-sm-12">
         <br>
 
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-warning" role="alert">
           <p id="soylecithin">Soy Lecithin optional</p>
         </div>
 
@@ -135,8 +142,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">stuff here</div>
-      <div class="col-sm-6">and here</div>
+      <div class="col-sm-6"><br></div>
+      <div class="col-sm-6"><br></div>
     </div>
 
   </div>

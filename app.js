@@ -11,9 +11,9 @@ function bmi () {
     var mltotal = volumeOIL * 30;
     var soylecithin = volumeOIL * 0.375;
     var soyfrac = new Fraction(soylecithin);
-    document.getElementById("soylecithin").innerHTML = "Optional addition of " +  soyfrac.toString() + " tsp. of lecithin (soy/sunflower)";
-    document.getElementById("MGs_total").innerHTML = "total MGs : " + MGs_total;
-    document.getElementById("caps_total").innerHTML = "total caps : " + Math.floor(caps_total);
-    document.getElementById("mgpercap").innerHTML = "mgs per cap : " +  mgpercap;
-    document.getElementById("mltotal").innerHTML = "total mL : " +  mltotal;
+    document.getElementById("soylecithin").innerHTML = "Optionally add " +  soyfrac.toString() + " tsp. of lecithin (soy/sunflower) during infusion process.";
+    document.getElementById("MGs_total").innerHTML = "Total Potency : " + MGs_total + "mgs total";
+    document.getElementById("caps_total").innerHTML = "Total Capsules : " + Math.floor(caps_total) + " caps";
+    document.getElementById("mgpercap").innerHTML = "Capsule Potency : " +  mgpercap + " mg/cap";
+    document.getElementById("mltotal").innerHTML = "Total mL infused : " +  mltotal + " mL";
     }
