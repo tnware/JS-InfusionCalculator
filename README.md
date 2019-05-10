@@ -1,9 +1,10 @@
 ## Infusion Calculator
 Calculate the potency of your home/lab-made THC/CBD Gel Capsules and tinctures.
 
-This calculator assumes you are infusing THC by default but can be adjusted for CBD etc. however performing calculations for multiple different compounds in one batch will not be possible.
+Demo available at [ GitHub Pages for this repository](https://tnware.github.io/JS-InfusionCalculator/)
 
 #### Features:
+- Optimized for mobile
 - Supports concentrates (BHO, CO2, Distillate, etc.)
 - Supports Flower
 - Supports standard gelcap sizes (0, 0E, 00, 00E, etc)
@@ -24,5 +25,8 @@ There are default parameters when you load up the app.
 3. If filling gelatin capsules, specify the size of the capsules you're using in the "settings" area as well.
 4. For cost calculations, insert the total cost of relevant starting materials.
 5. Refer to the chart at the bottom of the page for your results.
+
+This calculator assumes you are infusing THC by default but can be adjusted for CBD etc. however performing calculations for multiple different compounds in one batch will not be possible. To calculate the various compounds potency for a single batch, simply adjust the potency parameters in the "settings" area to reflect those of the respective compounds and record the levels for each.
+
 
 #### Written in HTML and JavaScript
