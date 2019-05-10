@@ -1,5 +1,5 @@
 ## Infusion Calculator
-Calculate the potency of your home/lab-made THC/CBD Gel Capsules and tinctures.
+Calculate the potency of your home-made THC/CBD Gel Capsules and tinctures.
 
 Demo available at [ GitHub Pages for this repository](https://tnware.github.io/JS-InfusionCalculator/)
 
