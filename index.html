@@ -37,16 +37,6 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <h4>Starting material</h4>
         <form>
-          <div class="form-group">
-            <label for="weightBHO">Concentrate Weight</label>
-            <div class="input-group">
-              <input class="form-control" id="weightBHO" type="text" value="1" oninput="bmi()" onchange="bmi()" />
-              <div class="input-group-append">
-                <span class="input-group-text">g</span>
-              </div>
-            </div>
-            <small id="bhoHelp" class="form-text text-muted">How much concentrate are you infusing into this batch?</small>
-          </div>
 
           <div class="form-group">
             <label for="weightBHO">Flower Weight</label>
@@ -60,12 +50,24 @@
           </div>
 
           <div class="form-group">
+            <label for="weightBHO">Concentrate Weight</label>
+            <div class="input-group">
+              <input class="form-control" id="weightBHO" type="text" value="1" oninput="bmi()" onchange="bmi()" />
+              <div class="input-group-append">
+                <span class="input-group-text">g</span>
+              </div>
+            </div>
+            <small id="bhoHelp" class="form-text text-muted">How much concentrate are you infusing into this batch?</small>
+          </div>
+
+          <div class="form-group">
             <label for="weightBHO">Oil Volume</label>
             <div class="input-group">
-              <input class="form-control" id="volumeOIL" type="text" value="1" oninput="bmi()" onchange="bmi()" />
-              <div class="input-group-append">
-                <span class="input-group-text">oz</span>
-              </div>
+              <input type="text" id="volumeOIL" aria-label="volumeOIL" value="1" class="form-control" oninput="bmi()" onchange="bmi()">
+              <select id="oilunit" class="form-control" oninput="bmi()" onchange="bmi()">
+                <option value="1.0">ounce(s)</option>
+                <option value="8.0">cup(s)</option>
+                </select>
             </div>
             <small id="oilvolumehelp" class="form-text text-muted">How much oil are you going to infuse?</small>
           </div>

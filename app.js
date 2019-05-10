@@ -8,11 +8,12 @@ function bmi () {
     var bhocost = Number(document.getElementById("bhocost").value);
     var nugcost = Number(document.getElementById("nugcost").value);
     var oilcost = Number(document.getElementById("oilcost").value);
+    var oilunit = Number(document.getElementById("oilunit").value);
     var MGs_total = ((bhopercent * 10) * weightBHO) + ((nugpercent * 10) * weightNUG);
-    var caps_total = (volumeOIL * 30) / capsize;
+    var caps_total = ((volumeOIL * oilunit) * 30) / capsize;
     var mgpercap = MGs_total / caps_total;
-    var mltotal = volumeOIL * 30;
-    var soylecithin = volumeOIL * 0.375;
+    var mltotal = (volumeOIL * oilunit) * 30;
+    var soylecithin = (volumeOIL * oilunit) * 0.375;
     var soyfrac = new Fraction(soylecithin);
     var costpercap = ((bhocost + nugcost + oilcost) / caps_total);
     var costperml = ((bhocost + nugcost + oilcost) / mltotal);
