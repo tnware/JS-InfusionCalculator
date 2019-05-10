@@ -16,6 +16,7 @@ function bmi () {
     var soyfrac = new Fraction(soylecithin);
     var costpercap = ((bhocost + nugcost + oilcost) / caps_total);
     var costperml = ((bhocost + nugcost + oilcost) / mltotal);
+    var totalcost = (bhocost + nugcost + oilcost);
     document.getElementById("soylecithin").innerHTML = "Optionally add " +  soyfrac.toString() + " tsp. of lecithin (soy/sunflower) during infusion process.";
     document.getElementById("MGs_total").innerHTML = "" + MGs_total + "mgs total";
     document.getElementById("caps_total").innerHTML = "" + Math.floor(caps_total) + " caps";
@@ -23,4 +24,5 @@ function bmi () {
     document.getElementById("mltotal").innerHTML = "" +  mltotal + " mL";
     document.getElementById("costpercap").innerHTML = "$" + costpercap + "/cap";
     document.getElementById("costperml").innerHTML = "$" + costperml + "/mL";
+    document.getElementById("totalcost").innerHTML = "$" + totalcost + " /batch";
     }
